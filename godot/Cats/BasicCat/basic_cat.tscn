@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://chhtr3df0x54j"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_2hx0w"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/sync = true
+
+[node name="BasicCat" type="CharacterBody2D"]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_2hx0w")

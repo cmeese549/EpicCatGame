@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd8o74s0fynk4"]
+
+[ext_resource type="Script" path="res://Multiplayer/Scripts/MultiplayerMenu.gd" id="2_vhtnw"]
+
+[node name="MultiplayerMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_vhtnw")
+
+[node name="Menu" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 379.0
+offset_top = 250.0
+offset_right = -379.0
+offset_bottom = -250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+offset_right = 394.0
+offset_bottom = 194.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 379.0
+offset_bottom = 179.0
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="Menu/MarginContainer/VBoxContainer"]
+offset_right = 364.0
+offset_bottom = 26.0
+text = "Epic Multiplayer Mode That Works Well"
+horizontal_alignment = 1
+
+[node name="HostButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+offset_top = 41.0
+offset_right = 364.0
+offset_bottom = 72.0
+text = "Host"
+
+[node name="JoinButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+offset_top = 87.0
+offset_right = 364.0
+offset_bottom = 118.0
+text = "Join"
+
+[node name="AddressEntry" type="LineEdit" parent="Menu/MarginContainer/VBoxContainer"]
+offset_top = 133.0
+offset_right = 364.0
+offset_bottom = 164.0
+placeholder_text = "Enter IP or whatever"
+alignment = 1
